@@ -1,6 +1,9 @@
+"""Flask web server for running EmotionDetection on input text."""
+
 from flask import Flask, render_template, request
 from EmotionDetection import emotion_detector
 
+# pylint: disable=invalid-name
 app = Flask(__name__)
 
 
@@ -35,3 +38,4 @@ def sent_analyzer():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
+    
